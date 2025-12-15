@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `coursework2` (Banco de dados: `coursework2`)
+-- Database: `coursework2` 
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `department` (Estrutura para tabela `department`)
+-- Table structure for table `department` 
 --
 
 CREATE TABLE `department` (
@@ -33,7 +33,7 @@ CREATE TABLE `department` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `department` (Despejando dados para a tabela `department`)
+-- Dumping data for table `department` 
 --
 
 INSERT INTO `department` (`DeptCode`, `DeptLocation`) VALUES
@@ -47,7 +47,7 @@ INSERT INTO `department` (`DeptCode`, `DeptLocation`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `employee` (Estrutura para tabela `employee`)
+-- Table structure for table `employee` 
 --
 
 CREATE TABLE `employee` (
@@ -60,7 +60,7 @@ CREATE TABLE `employee` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `employee` (Despejando dados para a tabela `employee`)
+-- Dumping data for table `employee` 
 --
 
 INSERT INTO `employee` (`EmpNo`, `Name`, `Job`, `HireDate`, `Salary`, `DeptCode`) VALUES
@@ -96,28 +96,28 @@ INSERT INTO `employee` (`EmpNo`, `Name`, `Job`, `HireDate`, `Salary`, `DeptCode`
 (1030, 'Yara S', 'Designer', '2019-05-05', 72000.00, '1A');
 
 --
--- Indexes for dumped tables (Índices para tabelas despejadas)
+-- Indexes for dumped tables 
 --
 
 --
--- Indexes for table `department` (Índices de tabela `department`)
+-- Indexes for table `department`
 --
 ALTER TABLE `department`
   ADD PRIMARY KEY (`DeptCode`);
 
 --
--- Indexes for table `employee` (Índices de tabela `employee`)
+-- Indexes for table `employee` 
 --
 ALTER TABLE `employee`
   ADD PRIMARY KEY (`EmpNo`),
   ADD KEY `DeptCode` (`DeptCode`);
 
 --
--- Constraints for dumped tables (Restrições para tabelas despejadas)
+-- Constraints for dumped tables 
 --
 
 --
--- Constraints for table `employee` (Restrições para tabelas `employee`)
+-- Constraints for table `employee` 
 --
 ALTER TABLE `employee`
   ADD CONSTRAINT `employee_ibfk_1` FOREIGN KEY (`DeptCode`) REFERENCES `department` (`DeptCode`);
